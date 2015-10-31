@@ -1,0 +1,8 @@
+[Unit]
+Description=MJPEG streamer service
+After=dev-%i.device systemd-user-sessions.service
+
+[Service]
+ExecStart=/usr/local/bin/mjpeg_stremer_v4l.sh "%I"
+Restart=always
+RestartSec=0
